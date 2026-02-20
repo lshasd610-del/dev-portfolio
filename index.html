@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- TODO: 여기에 본인 이름 / 직무 입력 -->
+  <title>김개발 | Junior Full Stack Developer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <header class="navbar" id="navbar">
+    <div class="nav-inner">
+      <!-- TODO: 로고 텍스트 변경 -->
+      <a href="#hero" class="nav-logo">김개발<span class="dot">.</span></a>
+
+      <nav aria-label="메인 네비게이션">
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="theme-btn" id="themeBtn" aria-label="다크모드 전환">
+          <span class="theme-icon">🌙</span>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="메뉴 열기" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===================== HERO ===================== -->
+    <section id="hero" class="hero">
+      <div class="hero-inner">
+
+        <!-- 좌측: 텍스트 영역 -->
+        <div class="hero-text">
+          <span class="hero-eyebrow">👋 Welcome to my portfolio</span>
+
+          <!-- TODO: 이름 변경 -->
+          <h1 class="hero-name">
+            안녕하세요,<br>
+            저는 <span class="gradient-text">이성혁</span>입니다.
+          </h1>
+
+          <!-- TODO: 직무 변경 -->
+          <p class="hero-role">Junior Full Stack Developer</p>
+
+          <!-- TODO: 소개 텍스트 변경 (3줄 이내 권장) -->
+          <p class="hero-desc">
+            웹 서비스의 전체 흐름을 이해하고 구현하는 신입 풀스택 개발자입니다.<br>
+            HTML, CSS, JavaScript와 Java, Spring Boot, SQL을 활용해 기능을 개발합니다.<br>
+            사용자 중심의 안정적인 서비스를 만드는 것을 목표로 합니다.
+          </p>
+
+          <div class="hero-btns">
+            <a href="#projects" class="btn btn-primary">프로젝트 보기</a>
+            <a href="#contact" class="btn btn-ghost">연락하기</a>
+          </div>
+        </div>
+
+        <!-- 우측: 프로필 사진 카드 -->
+        <div class="hero-photo-wrap">
+          <div class="hero-photo-card">
+            <!--
+              TODO: 사진 교체 방법
+              1) 이 폴더에 사진 파일을 넣어주세요 (예: photo.jpg)
+              2) 아래 div.photo-placeholder를 제거하고
+              3) 아래 주석을 해제하세요:
+              <img src="photo.jpg" alt="TODO: 본인 이름" class="photo-img" />
+            -->
+            <div class="photo-placeholder" aria-label="프로필 사진 자리">
+              <div class="photo-icon">👨‍💻</div>
+              <p>여기에 사진 삽입</p>
+            </div>
+
+            <!-- 사진 카드 장식 배지 -->
+            <div class="photo-badge photo-badge--top">Open to Work ✅</div>
+            <div class="photo-badge photo-badge--bottom">Full Stack Dev 🚀</div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- 스크롤 안내 -->
+      <div class="scroll-hint" aria-hidden="true">
+        <span>scroll</span>
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- ===================== ABOUT ===================== -->
+    <section id="about" class="section about">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">About Me</span>
+          <h2 class="section-title">저는 이런 개발자입니다</h2>
+        </div>
+
+        <div class="about-grid">
+          <!-- TODO: 자기소개 텍스트 변경 -->
+          <div class="about-text card">
+            <p>
+              안녕하세요! 저는 사용자가 실제로 사용하는 서비스를 만들고 싶은 신입 개발자
+              <strong>이성혁</strong>입니다.
+            </p>
+            <p>
+              프론트엔드의 UI/UX부터 백엔드 API, DB 설계까지 전체 흐름을 직접 구현해본 경험이 있습니다.
+              팀 프로젝트에서 적극적인 소통과 코드 리뷰를 통해 함께 성장하는 것을 즐깁니다.
+            </p>
+            <p>
+              매일 조금씩 더 나은 코드를 작성하기 위해 노력하며, 새로운 기술 도전을 두려워하지 않습니다.
+            </p>
+          </div>
+
+          <!-- TODO: 강점 키워드 변경 (main.js의 portfolioData.strengths) -->
+          <div class="about-strengths">
+            <h3 class="strengths-label">강점 &amp; 가치관</h3>
+            <div class="strengths-grid" id="strengthsGrid"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SKILLS ===================== -->
+    <section id="skills" class="section skills">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Skills</span>
+          <h2 class="section-title">기술 스택</h2>
+        </div>
+        <!-- main.js에서 자동 렌더링 -->
+        <div class="skills-grid" id="skillsGrid"></div>
+      </div>
+    </section>
+
+    <!-- ===================== PROJECTS ===================== -->
+    <section id="projects" class="section projects">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Projects</span>
+          <h2 class="section-title">프로젝트</h2>
+        </div>
+        <!-- main.js에서 자동 렌더링 -->
+        <div class="projects-grid" id="projectsGrid"></div>
+      </div>
+    </section>
+
+    <!-- ===================== CONTACT ===================== -->
+    <section id="contact" class="section contact">
+      <div class="container">
+        <div class="section-header centered">
+          <span class="section-label">Contact</span>
+          <h2 class="section-title">연락하기</h2>
+          <p class="section-sub">새로운 기회나 협업 제안을 기다리고 있습니다.</p>
+        </div>
+        <!-- main.js에서 자동 렌더링 -->
+        <div class="contact-list" id="contactList"></div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <!-- TODO: 이름 변경 -->
+      <p class="footer-copy">© 2026 이성혁. All rights reserved.</p>
+      <!-- TODO: 업데이트 날짜 변경 -->
+      <p class="footer-date">Last updated: 2026. 02</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
